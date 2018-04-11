@@ -39,7 +39,9 @@ The hardcore user will add places all over their map and create lists, trying to
 #### Screens
 * Map screen
 * List screen
+![listvc](images/readme/listvc.png)
 * Add place screen
+![createplacevc](images/readme/createplacevc.png)
 * Profile screen
 
 
@@ -59,6 +61,8 @@ The hardcore user will add places all over their map and create lists, trying to
     * location (address)
     * select categories
   * profileViewController
+  * placeInfoViewController
+    * shows name, location on map, and if visited
 * Other Classes
   * [list any other classes you will need]
 
