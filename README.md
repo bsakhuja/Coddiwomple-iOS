@@ -20,13 +20,15 @@
 ### App Design
 
 #### Objective
-[explain the goal of the app]
+Coddiwomple means to "travel in a purposeful manner towards a vague destination." Coddiwomple is an app for organizing the places around us to make traveling easier.
 
 #### Audience
-[who is this app targeting?]
+This app is targeted at adults who love to travel both in nature and in cities.
 
 #### Experience
-[how will your users interact with this app?]
+The casual user will add places to their map and visit a handful of the places they've added.  They will plan trips and check their map to see if they've added anything on the way or at their destination.
+
+The hardcore user will add places all over their map and create lists, trying to visit each place.
 
 [Back to top ^](#)
 
@@ -35,21 +37,43 @@
 ### Technical
 
 #### Screens
-* [list the different screens used in the app]
+* Map screen
+* List screen
+* Add place screen
+* Profile screen
+
 
 #### External services
-* [list which APIs or external services will your app use?]
+* For the MVP, there will be no external services.  Down the line, Coddiwomple will be integrated with the Google Maps API and Firebase to keep track of user's places and lists.
 
 #### Views, View Controllers, and other Classes
 * Views
-  * [list all views you will need]
+  * view places (map and list)
+  * add place
+  * profile
 * View Controllers
-  * [list all view controllers you will need]
+  * mapViewController
+  * listViewController
+  * addPlaceViewController
+    * name
+    * location (address)
+    * select categories
+  * profileViewController
 * Other Classes
   * [list any other classes you will need]
 
 #### Data models
-* [list all Firebase data models your app will need]
+* place
+    * name
+    * date created
+    * visited
+    * location (address or GPS coordinates)
+    * categories
+* category (can be custom or selected via checkboxes)
+* list
+    * name
+    * date created
+    * array of places
 
 [Back to top ^](#)
 
@@ -60,24 +84,38 @@
 
 #### Week 1
 _planning your app_
-* [goals for the week]
+* Create design document
+* Research appropriate cocoapods and APIs
+* Organize flow and structure of app
+* Create mockups and general design and aesthetic
 
 #### Week 2
 _finishing a usable build_
-* [goals for the week, should be finishing a usable app]
+* Create listViewController
+* Create addPlaceViewController
 
 #### Week 3
-* [goals for the week]
+* Create mapViewController
+    * Have places show up on map at correct address or GPS coordinates
 
 #### Week 4
-* [goals for the week, should be finishing all core features]
+* Create profileViewController
 
 #### Week 5
 _starting the polish_
-* [goals for the week]
+* Implement Firebase login(?)
+    * create loginViewController to handle login flow
+    * save all data models using Firebase on the user's account
+    * if data is present, load data onto map
 
 #### Week 6
 _submitting to the App Store_
-* [goals for the week, should be finishing the polish -- demo day on Saturday!]
+* Create stable build
+* Submit to app store
+
+
+#### Week 7
+_add additional features_
+* Import place by searching Google Maps
 
 [Back to top ^](#)
