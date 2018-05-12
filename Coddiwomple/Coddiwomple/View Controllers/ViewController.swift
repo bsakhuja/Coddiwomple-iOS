@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UISearchBarDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
     
     var matchingItems = [MKMapItem]()
     var matchingItemAnnotations = [MKAnnotation]()
@@ -60,8 +60,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         // The search is started
         activeSearch.start { (response, error) in
             
-            
-            
             // Stop updating location so that the map doesn't focus on your location when you move
             self.locationManager.stopUpdatingLocation()
             
@@ -86,9 +84,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                     for item in results.mapItems
                     {
                         self.matchingItems.append(item)
-                        let annotation = MKPointAnnotation()
-                        annotation.coordinate = item.placemark.coordinate
-                        annotation.title = item.name
+                        let annotation = PlaceAnnotation(title: item.name!, coordinate: item.placemark.coordinate)
                         self.matchingItemAnnotations.append(annotation)
                         self.mapView.addAnnotation(annotation)
                     }
@@ -99,29 +95,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         }
     }
     
-    // Customize the annotations
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let identifier = "marker"
-        var view: MKMarkerAnnotationView
-        
-        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
-        {
-            dequeuedView.annotation = annotation
-            view = dequeuedView
-        }
-        else
-        {
-            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            view.clusteringIdentifier = "myCluster"
-            view.markerTintColor = UIColor.red
-        }
-        return view
-    }
-    
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         
         // Create the track button item
         let trackButton = MKUserTrackingBarButtonItem.init(mapView: mapView)
@@ -137,7 +115,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -155,5 +132,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
 
 
+}
+
+extension ViewController: MKMapViewDelegate {
+    
+    // Show annotation info upon tapping annotation
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // Check if this is a PlaceAnnotation object
+        guard let annotation = annotation as? PlaceAnnotation else { return nil }
+        
+        // Display MarkerAnnotationViews
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        
+        // A map view reuses annotation views that are no longer visible. So you check to see if a reusable annotation view is available before creating a new one
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            as? MKMarkerAnnotationView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            
+            // Create a new MKMarkerAnnotationView object if one could not be dequeued.  Show callout bubble.
+            view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+            view.rightCalloutAccessoryView = UIButton(type: .infoLight)
+        }
+        return view
+    }
+    
+    // open the Maps app when user presses (i)
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
+                 calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! PlaceAnnotation
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        location.mapItem().openInMaps(launchOptions: launchOptions)
+    }
 }
 

@@ -16,6 +16,8 @@
 		06BC3D13207EB4FF001C0291 /* ListPlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC3D12207EB4FF001C0291 /* ListPlacesTableViewController.swift */; };
 		06BC3D15207EB5B8001C0291 /* ListPlacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC3D14207EB5B8001C0291 /* ListPlacesTableViewCell.swift */; };
 		06FC41C620A3C6F800A65FF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FC41C520A3C6F800A65FF9 /* MapKit.framework */; };
+		06FC9D7F20A7639000AB033E /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC9D7E20A7639000AB033E /* PlaceAnnotation.swift */; };
+		06FC9D8120A7684E00AB033E /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC9D8020A7684E00AB033E /* PlaceAnnotationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		06BC3D12207EB4FF001C0291 /* ListPlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesTableViewController.swift; sourceTree = "<group>"; };
 		06BC3D14207EB5B8001C0291 /* ListPlacesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlacesTableViewCell.swift; sourceTree = "<group>"; };
 		06FC41C520A3C6F800A65FF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		06FC9D7E20A7639000AB033E /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		06FC9D8020A7684E00AB033E /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 			children = (
 				06BC3CFA207E87C2001C0291 /* AppDelegate.swift */,
 				06BC3D0F207EB1C2001C0291 /* View Controllers */,
+				06FC9D7B20A7607900AB033E /* MapKit */,
 				06BC3D10207EB1CD001C0291 /* Table View Cells */,
 				06BC3D11207EB1F9001C0291 /* Storyboards */,
 				06BC3D04207E87C6001C0291 /* Assets.xcassets */,
@@ -107,6 +112,15 @@
 				06FC41C520A3C6F800A65FF9 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		06FC9D7B20A7607900AB033E /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				06FC9D7E20A7639000AB033E /* PlaceAnnotation.swift */,
+				06FC9D8020A7684E00AB033E /* PlaceAnnotationView.swift */,
+			);
+			path = MapKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,9 +201,11 @@
 			files = (
 				06BC3D15207EB5B8001C0291 /* ListPlacesTableViewCell.swift in Sources */,
 				06BC3CFD207E87C2001C0291 /* ViewController.swift in Sources */,
+				06FC9D8120A7684E00AB033E /* PlaceAnnotationView.swift in Sources */,
 				06BC3D03207E87C2001C0291 /* Coddiwomple.xcdatamodeld in Sources */,
 				06BC3CFB207E87C2001C0291 /* AppDelegate.swift in Sources */,
 				06BC3D13207EB4FF001C0291 /* ListPlacesTableViewController.swift in Sources */,
+				06FC9D7F20A7639000AB033E /* PlaceAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
