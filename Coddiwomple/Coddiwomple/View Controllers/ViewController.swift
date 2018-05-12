@@ -28,6 +28,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     // When user presses "Search"
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
+        // Remove items from the previous search
+        self.matchingItems.removeAll()
+        
+        // Remove annotations on map from the previous search
+        self.mapView.removeAnnotations(self.matchingItemAnnotations)
+        self.matchingItemAnnotations.removeAll()
         
         // Disable interaction events while searching (ignore user)
         UIApplication.shared.beginIgnoringInteractionEvents()
@@ -54,11 +60,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         // The search is started
         activeSearch.start { (response, error) in
             
-            // Remove items from the previous search
-            self.matchingItems.removeAll()
             
-            // Remove annotations on map from the previous search
-            self.mapView.removeAnnotations(self.matchingItemAnnotations)
             
             // Stop updating location so that the map doesn't focus on your location when you move
             self.locationManager.stopUpdatingLocation()
