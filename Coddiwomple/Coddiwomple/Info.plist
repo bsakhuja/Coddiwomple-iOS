@@ -39,11 +39,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Will you allow this app to always know your location?</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Do you allow this app to know your current location?</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Do you allow this app to know your current location?</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Will you allow this app to always know your location?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Do you allow this app to know your current location?</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Do you allow this app to know your current location?</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiYnNha2h1amEiLCJhIjoiY2poNm00aWMyMXFqMzJxazQ5MXE5b3UxZSJ9.FnKYvUAkssI9Ik95JBtIvg</string>
 </dict>
 </plist>

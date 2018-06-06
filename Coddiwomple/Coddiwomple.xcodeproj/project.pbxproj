@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06969B0420C890D10024493C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06969B0320C890D10024493C /* SearchTableViewController.swift */; };
 		06BC3CFB207E87C2001C0291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC3CFA207E87C2001C0291 /* AppDelegate.swift */; };
-		06BC3CFD207E87C2001C0291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC3CFC207E87C2001C0291 /* ViewController.swift */; };
+		06BC3CFD207E87C2001C0291 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BC3CFC207E87C2001C0291 /* SearchMapViewController.swift */; };
 		06BC3D00207E87C2001C0291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BC3CFE207E87C2001C0291 /* Main.storyboard */; };
 		06BC3D03207E87C2001C0291 /* Coddiwomple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06BC3D01207E87C2001C0291 /* Coddiwomple.xcdatamodeld */; };
 		06BC3D05207E87C6001C0291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BC3D04207E87C6001C0291 /* Assets.xcassets */; };
@@ -18,12 +19,14 @@
 		06FC41C620A3C6F800A65FF9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06FC41C520A3C6F800A65FF9 /* MapKit.framework */; };
 		06FC9D7F20A7639000AB033E /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC9D7E20A7639000AB033E /* PlaceAnnotation.swift */; };
 		06FC9D8120A7684E00AB033E /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FC9D8020A7684E00AB033E /* PlaceAnnotationView.swift */; };
+		B3569357182770005019615E /* libPods-Coddiwomple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41306A9AC3BD5B523D8C1681 /* libPods-Coddiwomple.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06969B0320C890D10024493C /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		06BC3CF7207E87C2001C0291 /* Coddiwomple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coddiwomple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BC3CFA207E87C2001C0291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06BC3CFC207E87C2001C0291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06BC3CFC207E87C2001C0291 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
 		06BC3CFF207E87C2001C0291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06BC3D02207E87C2001C0291 /* Coddiwomple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coddiwomple.xcdatamodel; sourceTree = "<group>"; };
 		06BC3D04207E87C6001C0291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		06FC41C520A3C6F800A65FF9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		06FC9D7E20A7639000AB033E /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		06FC9D8020A7684E00AB033E /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
+		10CC406A22541CABB1A7A993 /* Pods-Coddiwomple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coddiwomple.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coddiwomple/Pods-Coddiwomple.release.xcconfig"; sourceTree = "<group>"; };
+		41306A9AC3BD5B523D8C1681 /* libPods-Coddiwomple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Coddiwomple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B81ED1E6F5F62DBA6081BF45 /* Pods-Coddiwomple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coddiwomple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coddiwomple/Pods-Coddiwomple.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06FC41C620A3C6F800A65FF9 /* MapKit.framework in Frameworks */,
+				B3569357182770005019615E /* libPods-Coddiwomple.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,7 @@
 				06BC3CF9207E87C2001C0291 /* Coddiwomple */,
 				06BC3CF8207E87C2001C0291 /* Products */,
 				06FC41C420A3C6F800A65FF9 /* Frameworks */,
+				CF7EEA5365D4B0176C315D8F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,7 +91,8 @@
 		06BC3D0F207EB1C2001C0291 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				06BC3CFC207E87C2001C0291 /* ViewController.swift */,
+				06BC3CFC207E87C2001C0291 /* SearchMapViewController.swift */,
+				06969B0320C890D10024493C /* SearchTableViewController.swift */,
 				06BC3D12207EB4FF001C0291 /* ListPlacesTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -110,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				06FC41C520A3C6F800A65FF9 /* MapKit.framework */,
+				41306A9AC3BD5B523D8C1681 /* libPods-Coddiwomple.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,6 +133,15 @@
 			path = MapKit;
 			sourceTree = "<group>";
 		};
+		CF7EEA5365D4B0176C315D8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B81ED1E6F5F62DBA6081BF45 /* Pods-Coddiwomple.debug.xcconfig */,
+				10CC406A22541CABB1A7A993 /* Pods-Coddiwomple.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06BC3D0C207E87C6001C0291 /* Build configuration list for PBXNativeTarget "Coddiwomple" */;
 			buildPhases = (
+				72A3B1DE9F201021CDEBDBD7 /* [CP] Check Pods Manifest.lock */,
 				06BC3CF3207E87C2001C0291 /* Sources */,
 				06BC3CF4207E87C2001C0291 /* Frameworks */,
 				06BC3CF5207E87C2001C0291 /* Resources */,
+				51066A7590D8AE1C0880CD66 /* [CP] Embed Pods Frameworks */,
+				C0C504C25D32EC8513CC7317 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,18 +216,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51066A7590D8AE1C0880CD66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Coddiwomple/Pods-Coddiwomple-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coddiwomple/Pods-Coddiwomple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72A3B1DE9F201021CDEBDBD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coddiwomple-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0C504C25D32EC8513CC7317 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coddiwomple/Pods-Coddiwomple-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		06BC3CF3207E87C2001C0291 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				06BC3D15207EB5B8001C0291 /* ListPlacesTableViewCell.swift in Sources */,
-				06BC3CFD207E87C2001C0291 /* ViewController.swift in Sources */,
+				06BC3CFD207E87C2001C0291 /* SearchMapViewController.swift in Sources */,
 				06FC9D8120A7684E00AB033E /* PlaceAnnotationView.swift in Sources */,
 				06BC3D03207E87C2001C0291 /* Coddiwomple.xcdatamodeld in Sources */,
 				06BC3CFB207E87C2001C0291 /* AppDelegate.swift in Sources */,
 				06BC3D13207EB4FF001C0291 /* ListPlacesTableViewController.swift in Sources */,
 				06FC9D7F20A7639000AB033E /* PlaceAnnotation.swift in Sources */,
+				06969B0420C890D10024493C /* SearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +426,7 @@
 		};
 		06BC3D0D207E87C6001C0291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B81ED1E6F5F62DBA6081BF45 /* Pods-Coddiwomple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +446,7 @@
 		};
 		06BC3D0E207E87C6001C0291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10CC406A22541CABB1A7A993 /* Pods-Coddiwomple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

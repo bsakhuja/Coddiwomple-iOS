@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
+class SearchMapViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
     
     var matchingItems = [MKMapItem]()
     var matchingItemAnnotations = [MKAnnotation]()
@@ -134,24 +134,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDe
 
 }
 
-extension ViewController: MKMapViewDelegate {
+extension SearchMapViewController: MKMapViewDelegate {
     
     // Show annotation info upon tapping annotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         // Check if this is a PlaceAnnotation object
         guard let annotation = annotation as? PlaceAnnotation else { return nil }
-        
+
         // Display MarkerAnnotationViews
         let identifier = "marker"
         var view: MKMarkerAnnotationView
-        
+
         // A map view reuses annotation views that are no longer visible. So you check to see if a reusable annotation view is available before creating a new one
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {
             dequeuedView.annotation = annotation
             view = dequeuedView
         } else {
-            
+
             // Create a new MKMarkerAnnotationView object if one could not be dequeued.  Show callout bubble.
             view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             view.canShowCallout = true
